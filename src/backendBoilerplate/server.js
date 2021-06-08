@@ -1,6 +1,6 @@
 import connectDB from './db/mongoose.js'
 import colors from 'colors'
-import { errRouter, notFoundRouter } from './middlewares/errMiddleware.js'
+import { errRouter, notFoundRouter } from './middlewares/errMiddlewares.js'
 import express from 'express'
 
 connectDB()
