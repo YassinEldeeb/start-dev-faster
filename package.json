@@ -22,12 +22,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+"
+    "url": "git+https://github.com/YassinEldeeb/start-dev-faster/issues"
   },
   "bugs": {
-    "url": "git+/issues"
+    "url": "https://github.com/YassinEldeeb/start-dev-faster/issues"
   },
-  "homepage": {
-    "url": "git+/issues"
-  }
+  "homepage": "https://github.com/YassinEldeeb/start-dev-faster#readme"
 }
