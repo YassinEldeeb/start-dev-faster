@@ -39,7 +39,7 @@ const FullStackApp = async () => {
       )
       writeFileSync(cwd + '/fullstack/.env', env)
       spawn(
-        `npm init -y && npm i express mongoose nodemon concurrently dotenv colors`,
+        `cd fullstack && npm init -y && npm i express mongoose nodemon concurrently dotenv colors`,
         [],
         {
           shell: true,

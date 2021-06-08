@@ -10,9 +10,7 @@ const ReactApp = (app, fullstack) => {
         shell: true,
         stdio: 'inherit',
       }
-    ).on('exit', () => {
-      fs.unlink(`./frontend/Readme.md`)
-    })
+    )
   } catch (error) {
     console.log(error)
   }
