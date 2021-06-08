@@ -3,7 +3,7 @@ import { spawn } from 'child_process'
 import modfiyPackage from '../utils/modifyPackage.js'
 
 const ExpressApp = async (app) => {
-  const srcDir = `./backendBoilerplate`
+  const srcDir = `./src/backendBoilerplate`
   const destDir = `./${app}`
 
   if (!fs.existsSync(destDir)) {

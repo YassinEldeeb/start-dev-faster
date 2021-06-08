@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Quickly Start developing your frontend, backend and Fullstack apps with the MERN Stack.",
   "main": "src/app.js",
-  "bin": "src/app.js",
+  "bin": {
+    "start-dev-faster": "src/app.js"
+  },
   "type": "module",
   "scripts": {
     "start": "node src/app.js"
@@ -27,5 +29,6 @@
   "bugs": {
     "url": "https://github.com/YassinEldeeb/start-dev-faster/issues"
   },
-  "homepage": "https://github.com/YassinEldeeb/start-dev-faster#readme"
+  "homepage": "https://github.com/YassinEldeeb/start-dev-faster#readme",
+  "devDependencies": {}
 }

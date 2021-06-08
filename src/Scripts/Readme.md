@@ -1,4 +1,4 @@
-# Getting Started with Start Dev Faster Boilerblate
+# Getting Started with Start Dev Faster Boilerplate
 
 This project was bootstrapped with [Start Dev Faster](https://github.com/facebook/create-react-app).
 
