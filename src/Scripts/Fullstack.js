@@ -22,19 +22,22 @@ const env = fs.readFileSync(
 const cwd = process.cwd()
 
 const FullStackApp = async () => {
-  const destDir = `${cwd}/backend`
+  const destDir = `${cwd}/fullstack/backend`
 
   if (!fs.existsSync(destDir)) {
     try {
       await fs.mkdirSync(cwd + '/fullstack')
 
       await fs.mkdirSync(cwd + '/fullstack/backend')
-      writeFileSync(cwd + '/backend/server.js', server)
-      await fs.mkdirSync(cwd + '/backend/db')
-      writeFileSync(cwd + '/backend/db/mongoose.js', mongoose)
-      await fs.mkdirSync(cwd + '/backend/middlewares')
-      writeFileSync(cwd + '/backend/middlewares/errMiddlewares.js', middlewares)
-      writeFileSync(cwd + '/.env', env)
+      writeFileSync(cwd + '/fullstack/backend/server.js', server)
+      await fs.mkdirSync(cwd + '/fullstack/backend/db')
+      writeFileSync(cwd + '/fullstack/backend/db/mongoose.js', mongoose)
+      await fs.mkdirSync(cwd + '/fullstack/backend/middlewares')
+      writeFileSync(
+        cwd + '/fullstack/backend/middlewares/errMiddlewares.js',
+        middlewares
+      )
+      writeFileSync(cwd + '/fullstack/.env', env)
       spawn(
         `npm init -y && npm i express mongoose nodemon concurrently dotenv colors`,
         [],
