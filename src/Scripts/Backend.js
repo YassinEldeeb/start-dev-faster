@@ -1,10 +1,13 @@
 import fs from 'fs-extra'
 import { spawn } from 'child_process'
 import modfiyPackage from '../utils/modifyPackage.js'
+import path from 'path'
+const __dirname = path.resolve()
+const cwd = process.cwd()
 
 const ExpressApp = async (app) => {
-  const srcDir = `./backendBoilerplate`
-  const destDir = `./${app}`
+  const srcDir = `${__dirname}/src/backendBoilerplate`
+  const destDir = `${cwd}/${app}`
 
   if (!fs.existsSync(destDir)) {
     try {
