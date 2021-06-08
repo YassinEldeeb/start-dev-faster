@@ -26,14 +26,15 @@ const FullStackApp = async () => {
 
   if (!fs.existsSync(destDir)) {
     try {
-      await fs.mkdirSync(cwd + '/backend')
+      await fs.mkdirSync(cwd + '/fullstack')
+
+      await fs.mkdirSync(cwd + '/fullstack/backend')
       writeFileSync(cwd + '/backend/server.js', server)
       await fs.mkdirSync(cwd + '/backend/db')
       writeFileSync(cwd + '/backend/db/mongoose.js', mongoose)
       await fs.mkdirSync(cwd + '/backend/middlewares')
       writeFileSync(cwd + '/backend/middlewares/errMiddlewares.js', middlewares)
       writeFileSync(cwd + '/.env', env)
-      // await fs.copy(`${__dirname}/Readme.md`, `${cwd}/Readme.md`)
       spawn(
         `npm init -y && npm i express mongoose nodemon concurrently dotenv colors`,
         [],
@@ -43,7 +44,7 @@ const FullStackApp = async () => {
         }
       ).on('exit', async () => {
         modfiyPackage(true)
-        ReactApp('frontend')
+        ReactApp('frontend', true)
       })
     } catch (error) {
       console.log(error)

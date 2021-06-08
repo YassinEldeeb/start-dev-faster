@@ -1,12 +1,16 @@
 import { spawn } from 'child_process'
 import fs from 'fs-extra'
 
-const ReactApp = (app) => {
+const ReactApp = (app, fullstack) => {
   try {
-    spawn(`npx create-react-app ${app} && cd ${app}`, [], {
-      shell: true,
-      stdio: 'inherit',
-    }).on('exit', () => {
+    spawn(
+      `${fullstack ? 'cd ./fullstack && ' : ''}npx create-react-app ${app}`,
+      [],
+      {
+        shell: true,
+        stdio: 'inherit',
+      }
+    ).on('exit', () => {
       fs.unlink(`./frontend/Readme.md`)
     })
   } catch (error) {
