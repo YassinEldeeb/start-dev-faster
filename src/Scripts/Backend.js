@@ -3,12 +3,21 @@ import { spawn } from 'child_process'
 import modfiyPackage from '../utils/modifyPackage.js'
 const { writeFileSync } = fs
 // Backend Files
-const mongoose = fs.readFileSync('./src/backendBoilerplate/db/mongoose.js')
-const server = fs.readFileSync('./src/backendBoilerplate/server.js')
-const middlewares = fs.readFileSync(
-  './src/backendBoilerplate/middlewares/errMiddlewares.js'
+const mongoose = fs.readFileSync(
+  new URL('../backendBoilerplate/db/mongoose.js', import.meta.url)
 )
-const env = fs.readFileSync('./src/backendBoilerplate/.env')
+const server = fs.readFileSync(
+  new URL('../backendBoilerplate/server.js', import.meta.url)
+)
+const middlewares = fs.readFileSync(
+  new URL(
+    '../backendBoilerplate/middlewares/errMiddlewares.js',
+    import.meta.url
+  )
+)
+const env = fs.readFileSync(
+  new URL('../backendBoilerplate/.env', import.meta.url)
+)
 
 const cwd = process.cwd()
 
