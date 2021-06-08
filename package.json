@@ -1,0 +1,33 @@
+{
+  "name": "start-dev-faster",
+  "version": "1.0.0",
+  "description": "Quickly Start developing your frontend, backend and Fullstack apps with the MERN Stack.",
+  "main": "src/app.js",
+  "bin": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "keywords": [
+    "Boilerplate",
+    "Express",
+    "Node.js",
+    "React"
+  ],
+  "author": "Yassin Eldeeb",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+"
+  },
+  "bugs": {
+    "url": "git+/issues"
+  },
+  "homepage": {
+    "url": "git+/issues"
+  }
+}
