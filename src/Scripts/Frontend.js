@@ -4,7 +4,7 @@ import fs from 'fs-extra'
 const ReactApp = (app, fullstack) => {
   try {
     spawn(
-      `${fullstack ? 'cd ./fullstack && ' : ''}npx create-react-app ${app}`,
+      `${fullstack ? `cd ./${fullstack} &&` : ''}npx create-react-app ${app}`,
       [],
       {
         shell: true,

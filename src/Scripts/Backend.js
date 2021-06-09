@@ -26,13 +26,13 @@ const ExpressApp = async (app) => {
 
   if (!fs.existsSync(destDir)) {
     try {
-      await fs.mkdirSync(cwd + '/backend')
-      writeFileSync(cwd + '/backend/server.js', server)
-      await fs.mkdirSync(cwd + '/backend/db')
-      writeFileSync(cwd + '/backend/db/mongoose.js', mongoose)
-      await fs.mkdirSync(cwd + '/backend/middlewares')
-      writeFileSync(cwd + '/backend/middlewares/errMiddlewares.js', middlewares)
-      writeFileSync(cwd + '/backend/.env', env)
+      await fs.mkdirSync(cwd + `/${app}`)
+      writeFileSync(cwd + `/${app}/server.js`, server)
+      await fs.mkdirSync(cwd + `/${app}/db`)
+      writeFileSync(cwd + `/${app}/db/mongoose.js`, mongoose)
+      await fs.mkdirSync(cwd + `/${app}/middlewares`)
+      writeFileSync(cwd + `/${app}/middlewares/errMiddlewares.js`, middlewares)
+      writeFileSync(cwd + `/${app}/.env`, env)
 
       spawn(
         `cd ${app} && npm init -y && npm i express mongoose nodemon dotenv colors`,
@@ -41,7 +41,7 @@ const ExpressApp = async (app) => {
           shell: true,
           stdio: 'inherit',
         }
-      ).on('exit', modfiyPackage)
+      ).on('exit', () => modfiyPackage(null, app))
     } catch (err) {
       console.log(err)
     }

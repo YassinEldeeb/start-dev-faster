@@ -5,6 +5,7 @@ import { ExpressApp } from './Scripts/Backend.js'
 import { FullStackApp } from './Scripts/Fullstack.js'
 
 const askForProjectType = () => {
+  const appName = process.argv[2]
   inquirer
     .prompt([
       {
@@ -17,13 +18,13 @@ const askForProjectType = () => {
     .then(({ value }) => {
       switch (value) {
         case 'Frontend':
-          ReactApp(value.toLowerCase())
+          ReactApp(appName.toLowerCase())
           break
         case 'Backend':
-          ExpressApp(value.toLowerCase())
+          ExpressApp(appName.toLowerCase())
           break
         case 'Full Stack':
-          FullStackApp(value.toLowerCase())
+          FullStackApp(appName.toLowerCase())
           break
       }
     })

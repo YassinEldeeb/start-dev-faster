@@ -1,9 +1,9 @@
 import fs from 'fs-extra'
 
-const modfiyPackage = async (fullstack) => {
+const modfiyPackage = async (fullstack, app) => {
   const data = JSON.parse(
     await fs.readFile(
-      fullstack ? './package.json' : './backend/package.json',
+      fullstack ? `./${app}/package.json` : `./${app}/package.json`,
       'utf8'
     )
   )
@@ -29,7 +29,7 @@ const modfiyPackage = async (fullstack) => {
 
   // Write new Package.json
   await fs.writeFile(
-    fullstack ? './package.json' : './backend/package.json',
+    fullstack ? `./${app}/package.json` : `./${app}/package.json`,
     JSON.stringify(dataObj, null, 2),
     'utf-8'
   )
