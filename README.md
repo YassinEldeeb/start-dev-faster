@@ -61,7 +61,7 @@ In the project directory, you can run:
 
 ### `npm run start (Fullstack and Backend)`
 
-Runs the Backend express server in the production mode
+Runs the Backend express server in production mode
 
 ### `npm start (Frontend only)`
 
