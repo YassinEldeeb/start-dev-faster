@@ -3,11 +3,12 @@ import inquirer from 'inquirer'
 import { ReactApp } from './Scripts/Frontend.js'
 import { ExpressApp } from './Scripts/Backend.js'
 import { FullStackApp } from './Scripts/Fullstack.js'
+import colors from 'colors'
 
 const askForProjectType = () => {
   const appName = process.argv[2]
   if (!appName) {
-    console.error('Error: Project name must be specified')
+    console.error('Error: Project name must be specified'.red.underline.bold)
     process.exit(1)
   }
 
