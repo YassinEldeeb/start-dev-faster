@@ -5,9 +5,9 @@ This project was bootstrapped with [Start Dev Faster](https://github.com/YassinE
 # Highlights
 
 - Full Stack Boilerplate like a pro
-- All important scripts will be writting for you to use quickly
+- All important scripts will be written for you to use quickly
 - Express Server setup
-- Connect to Mongodb setup
+- Connect to Mongodb with mongoose setup
 - 404 & Error middlewares all setup
 - .env config and initial values is setup
 - React app Boilerplate exactly from npx create-react-app command.
