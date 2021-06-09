@@ -1,4 +1,4 @@
-import { spawn } from 'child_process'
+import { spawn, execSync } from 'child_process'
 import fs from 'fs-extra'
 
 const ReactApp = (app, fullstack) => {
@@ -10,7 +10,19 @@ const ReactApp = (app, fullstack) => {
         shell: true,
         stdio: 'inherit',
       }
-    )
+    ).on('exit', () => {
+      if (fullstack) {
+        const gitLocation = './' + fullstack + '/' + app + '/.git'
+        // fs.rmdirSync(gitLocation, { recursive: true })
+        execSync(
+          `cd ${fullstack} && git init && git add . && git commit -m"init"`
+        )
+        console.log(
+          'git initilized and all files are commited to init'.cyan.underline
+            .bold
+        )
+      }
+    })
   } catch (error) {
     console.log(error)
   }

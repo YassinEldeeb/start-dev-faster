@@ -35,7 +35,7 @@ const ExpressApp = async (app) => {
       writeFileSync(cwd + `/${app}/.env`, env)
 
       spawn(
-        `cd ${app} && npm init -y && npm i express mongoose nodemon dotenv colors`,
+        `cd ${app} && npm init -y && npm i express mongoose nodemon dotenv colors --prefix`,
         [],
         {
           shell: true,
@@ -43,7 +43,11 @@ const ExpressApp = async (app) => {
         }
       ).on('exit', async () => {
         await modfiyPackage(null, app)
-        execSync(`git init && git add . && git commit -m"init"`)
+        execSync(`cd ${app} && git init && git add . && git commit -m"init"`)
+        console.log(
+          'git initilized and all files are commited to init'.cyan.underline
+            .bold
+        )
       })
     } catch (err) {
       console.log(err)
