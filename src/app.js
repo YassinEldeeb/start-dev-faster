@@ -6,6 +6,9 @@ import { FullStackApp } from './Scripts/Fullstack.js'
 
 const askForProjectType = () => {
   const appName = process.argv[2]
+  if (!appName) {
+    throw new Error('Project name must be specified')
+  }
   inquirer
     .prompt([
       {
