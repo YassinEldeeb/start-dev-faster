@@ -4,13 +4,13 @@
 
 # Start Dev Faster Boilerplates Project Structure
 
-## Full Stack
+### Full Stack
 <img src="/images/fullstack.png"/>
 
-## Backend
+### Backend
 <img src="/images/backend.png"/>
 
-## Frontend
+### Frontend
 <img src="/images/frontend.png"/>
 
 # Highlights
