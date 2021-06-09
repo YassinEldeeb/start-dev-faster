@@ -14,10 +14,10 @@ This project was bootstrapped with [Start Dev Faster](https://github.com/YassinE
 
 # Usage
 
-- Just Type in your terminal
+Just Type in your terminal
 
 ```shell
-npx start-dev-faster <project name>
+$ npx start-dev-faster <project name>
 ```
 
 ## Available Scripts
