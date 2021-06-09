@@ -37,28 +37,33 @@ $ npx start-dev-faster <project name>
 
 In the project directory, you can run:
 
-### `npm run dev`
+### `npm run dev (Fullstack & Backend)`
 
 - Runs both backend server & frontend app with concurrently in the same terminal process(Full Stack) or the Server only if it's(backend).\
   - Open [http://localhost:3000](http://localhost:3000) to view Frontend react app in the browser.
   - Open [http://localhost:5000](http://localhost:5000) to view Backend express server in the browser.
 
-### `npm run client`
+### `npm run client (Fullstack only)`
 
 - Runs the Frontend react app in the development mode.\
 - Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm run server`
+### `npm run server (Fullstack only)`
 
 - Runs the Backend express server in the development mode.\
   Open [http://localhost:5000/api](http://localhost:5000/api) to ensure that the api is running.
 
-### `npm run db`
+### `npm run db (Fullstack and Backend)`
 
 - Runs Mongodb server to start connecting it with express server.\
   Modify the 'MONGO_URI' environment variable in .env to the right path to mongod.exe and data folder path.
 - You must edit the npm run db script to the right path to your mongod.exe and mongodb-data folder
 
-### `npm run start`
+### `npm run start (Fullstack and Backend)`
 
 Runs the Backend express server in the production mode
+
+### `npm start (Frontend only)`
+
+- Runs the Frontend react app in the development mode.\
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
