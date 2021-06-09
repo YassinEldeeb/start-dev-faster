@@ -1,3 +1,7 @@
+<h1 align="center">Start Dev Faster
+<p align="center"><img src="/images/Logo.png"/></p></h1>
+
+
 # Getting Started with Start Dev Faster Boilerplate
 
 This project was bootstrapped with [Start Dev Faster](https://github.com/YassinEldeeb/start-dev-faster).
