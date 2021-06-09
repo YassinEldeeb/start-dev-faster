@@ -2,9 +2,16 @@
 <p align="center"><img src="/images/Logo.png"/></p></h1>
 
 
-# Getting Started with Start Dev Faster Boilerplate
+# Start Dev Faster Boilerplates Project Structure
 
-This project was bootstrapped with [Start Dev Faster](https://github.com/YassinEldeeb/start-dev-faster).
+## Full Stack
+<img src="/images/fullstack.png"/>
+
+## Backend
+<img src="/images/backend.png"/>
+
+## Frontend
+<img src="/images/frontend.png"/>
 
 # Highlights
 
