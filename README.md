@@ -1,16 +1,17 @@
 <h1 align="center">Start Dev Faster
 <p align="center"><img src="/images/Logo.png"/></p></h1>
 
-
 # Start Dev Faster Boilerplates Project Structure
 
-### Full Stack
-<img src="/images/fullstack.png"/>
+- Full Stack
+  <img src="/images/fullstack.png"/>
 
-### Backend
+- Backend
+
 <img src="/images/backend.png"/>
 
-### Frontend
+- Frontend
+
 <img src="/images/frontend.png"/>
 
 # Highlights
