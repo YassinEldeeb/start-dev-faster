@@ -1,5 +1,5 @@
 import fs from 'fs-extra'
-import { spawn } from 'child_process'
+import { spawn, execSync } from 'child_process'
 import modfiyPackage from '../utils/modifyPackage.js'
 const { writeFileSync } = fs
 // Backend Files
@@ -41,7 +41,10 @@ const ExpressApp = async (app) => {
           shell: true,
           stdio: 'inherit',
         }
-      ).on('exit', () => modfiyPackage(null, app))
+      ).on('exit', async () => {
+        await modfiyPackage(null, app)
+        execSync(`git init && git add . && git commit -m"init"`)
+      })
     } catch (err) {
       console.log(err)
     }
