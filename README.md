@@ -2,6 +2,20 @@
 
 This project was bootstrapped with [Start Dev Faster](https://github.com/YassinEldeeb/start-dev-faster).
 
+# Highlights
+
+- Full Stack Boilerplate like a pro
+- All important scripts will be writting for you to use quickly
+- Express Server setup
+- Connect to Mongodb setup
+- 404 & Error middlewares all setup
+- .env config and initial values is setup
+- React app Boilerplate exactly from npx create-react-app command.
+
+# Usage
+
+- Just Type in your terminal `npx start-dev-faster <project name>`
+
 ## Available Scripts
 
 In the project directory, you can run:
