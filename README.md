@@ -5,6 +5,7 @@
 
 - Full Stack Boilerplate like a pro
 - All important scripts will be written for you to use quickly
+- Git will be initialized in every project and the boilerplate will be commited automatically
 - Express Server setup
 - Connect to Mongodb with mongoose setup
 - 404 & Error middlewares all setup
