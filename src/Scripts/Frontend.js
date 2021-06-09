@@ -14,7 +14,7 @@ const ReactApp = (app, fullstack) => {
       if (fullstack) {
         const gitLocation = './' + fullstack + '/' + app + '/.git'
         const gitIgnoreLocation = './' + fullstack + '/' + app + '/.gitignore'
-        fs.unlinkSync(gitLocation, { recursive: true })
+        fs.rmdirSync(gitLocation, { recursive: true })
         fs.unlinkSync(gitIgnoreLocation, { recursive: true })
         execSync(
           `cd ${fullstack} && git init && git add . && git commit -m"init"`

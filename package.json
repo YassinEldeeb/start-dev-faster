@@ -1,6 +1,6 @@
 {
   "name": "start-dev-faster",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Quickly Start developing your frontend, backend and Fullstack apps with the MERN Stack.",
   "main": "src/app.js",
   "bin": "src/app.js",
