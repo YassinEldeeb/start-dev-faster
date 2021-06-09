@@ -18,6 +18,9 @@ const middlewares = fs.readFileSync(
 const env = fs.readFileSync(
   new URL('../backendBoilerplate/.env', import.meta.url)
 )
+const gitignore = fs.readFileSync(
+  new URL('../backendBoilerplate/.gitignore', import.meta.url)
+)
 
 const cwd = process.cwd()
 
@@ -33,6 +36,7 @@ const ExpressApp = async (app) => {
       await fs.mkdirSync(cwd + `/${app}/middlewares`)
       writeFileSync(cwd + `/${app}/middlewares/errMiddlewares.js`, middlewares)
       writeFileSync(cwd + `/${app}/.env`, env)
+      writeFileSync(cwd + `/${app}/.gitignore`, gitignore)
 
       spawn(
         `cd ${app} && npm init -y && npm i express mongoose nodemon dotenv colors --prefix`,
