@@ -19,7 +19,7 @@ const env = fs.readFileSync(
   new URL('../backendBoilerplate/.env', import.meta.url)
 )
 const gitignore = fs.readFileSync(
-  new URL('../backendBoilerplate/.gitignore', import.meta.url)
+  new URL('../backendBoilerplate/gitignore.txt', import.meta.url)
 )
 
 const cwd = process.cwd()
